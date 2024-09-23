@@ -1,0 +1,204 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  height: 160vh;
+  width: 100%;
+}
+
+.navbar {
+  background-color: navy;
+  color: white;
+  padding: 1em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-logo {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card {
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 1em;
+  font-family: "Play", "Helvetica Neue", "Helvetica";
+  font-style: italic;
+  font-weight: lighter;
+  padding-bottom: 30px;
+}
+
+.card:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  scale: 1.1;
+}
+
+.card > img {
+  height: 220px;
+  width: 200px;
+  object-fit: fill;
+  border-radius: 2rem;
+}
+
+.card-hero > img {
+  height: 320px;
+  width: 300px;
+  object-fit: fill;
+  border-radius: 2rem;
+}
+
+.grid-container {
+  height: 240vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-areas:
+    "products products products"
+    "our-team our-team our-team"
+    "products-two products-two products-two"
+    "footer footer footer";
+}
+
+.products {
+  border: 10px solid white;
+  grid-area: products;
+  background-color: azure;
+  display: flex;
+}
+
+.our-team {
+  grid-area: our-team;
+  background-image: url(../images/keg.jpg);
+  background-blend-mode: color-burn;
+  background-color: navy;
+  color: white;
+  height: 800px;
+  margin-bottom: 30px;
+}
+
+.products-two {
+  grid-area: products-two;
+  background-color: azure;
+  display: flex;
+  gap: 1em;
+}
+
+#join-message {
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  font-family: "Bungee", sans-serif;
+  color: white;
+  padding-top: 5rem;
+}
+#join-message-para {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Bungee", sans-serif;
+  color: white;
+  padding-top: 5rem;
+}
+footer {
+  grid-area: footer;
+  color: white;
+  background: #000;
+  padding: 30px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}

@@ -1,0 +1,295 @@
+:root {
+  --base-color: #171717;
+  --secondary-color: #a1460e;
+  --action-color: #cc6d3d;
+  --layover-color: #d2e1f36c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 245vh;
+  background-color: var(--base-color);
+}
+
+.navbar {
+  background-image: linear-gradient(
+    rgb(8, 3, 0) 0%,
+    rgba(43, 19, 1, 0.678) 50%,
+    rgba(33, 15, 1, 0) 100%
+  );
+  padding: 1em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-logo {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  -webkit-animation: glowing-text 1s ease-in-out infinite alternate;
+  -moz-animation: glowing-text 1s ease-in-out infinite alternate;
+  animation: glowing-text 1s ease-in-out infinite alternate;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+@-webkit-keyframes glowing-text {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e00e6,
+      0 0 40px #6300e6, 0 0 50px #13e600, 0 0 60px #0073e6, 0 0 70px #e600ca;
+  }
+
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ec6409, 0 0 40px #ad0e0e,
+      0 0 50px #9fd712, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+#mainstay {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../images/race.jpg);
+  background-color: rgba(17, 7, 2, 0.826);
+  background-blend-mode: color-dodge;
+  background-size: cover;
+  position: relative;
+}
+
+#animation-container {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 25vh;
+  left: 35vw;
+  width: 50vw;
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #9d411e;
+  background-image: -webkit-linear-gradient(
+    0deg,
+    #e4561e 34%,
+    #d7fa0b 93%,
+    #a5ed28 70%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+#flip {
+  height: 60px;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color: black;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.5fr;
+  grid-template-rows: 1.5fr 3.5fr 2.5fr 2.5fr 1fr;
+  grid-template-areas:
+    "main main header"
+    "main main wheels"
+    "classics newera wheels"
+    "racing offroad wheels"
+    "footer footer wheels";
+  height: 140vh;
+  gap: 0.8em;
+  margin: 1em;
+  color: black;
+  border-radius: 3px;
+}
+
+header {
+  grid-area: header;
+  background-image: url(../images/dashboard.jpg);
+  color: white;
+}
+
+main {
+  grid-area: main;
+  background-image: url(../images/main.jpeg);
+  background-color: var(--base-color);
+  font-size: 50px;
+  color: #ccc;
+}
+
+#classics {
+  grid-area: classics;
+  background-color: var(--layover-color);
+  background-image: url(../images/classics.jpg);
+}
+
+#newera {
+  grid-area: newera;
+  background-color: var(--layover-color);
+  background-image: url(../images/newera.jpg);
+}
+#offroad {
+  grid-area: offroad;
+  background-color: var(--layover-color);
+  background-image: url(../images/main8.jpg);
+}
+
+#racing {
+  grid-area: racing;
+  background-color: var(--layover-color);
+  background-image: url(../images/race.jpg);
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--base-color);
+  background-blend-mode: screen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding-top: 10px;
+  color: white;
+  text-shadow: 0 0 2x white, 0 0 20px white;
+}
+
+header,
+main,
+#classics,
+#newera,
+#offroad,
+#racing,
+.wheels {
+  background-blend-mode: lighten;
+  font-size: 40px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.wheels {
+  color: #ccc;
+  grid-area: wheels;
+  background-color: var(--action-color);
+  background-image: url(../images/carside2.jpg);
+  background-blend-mode: darken;
+}
+
+header:hover,
+main:hover {
+  background-blend-mode: hard-light;
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.868);
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  color: white;
+}
+
+#racing:hover,
+#offroad:hover,
+#classics:hover,
+#newera:hover,
+.wheels:hover {
+  background-blend-mode: color-burn;
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.868);
+  text-shadow: 0 0 10px white, 0 0 20px white;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+
+@media only screen and (max-width: 780px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 2.2fr 2.2fr 1.2fr 1.2fr 1.2fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "wheels"
+      "classics"
+      "newera"
+      "racing"
+      "offroad"
+      "footer";
+  }
+}

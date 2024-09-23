@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.image-section {
+  flex: 2;
+  background: url("../images/diner.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+
+.dining-space {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: #ccc;
+  padding-bottom: 10px;
+}
+
+.book-btn {
+  background-color: #f0ad4e;
+  color: #333;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: color 0.9s ease, text-shadow 0.9s ease-in-out, box-shadow 0.9s ease-in-out; 
+}
+
+.book-btn:hover {
+  background-color: #0c0802;
+  color: #ccc;
+  text-shadow: 
+  0 0 5px #b0b659,
+  0 0 10px #b65959,
+  0 0 15px #b66759,
+  0 0 20px #db6034,
+  0 0 35px #ff2a00,
+  0 0 40px #db6c34;
+
+  box-shadow: 
+  0 0 5px rgb(255, 183, 165),
+  0 0 10px #4c150c,
+  0 0 15px #fb8f03,
+  0 0 20px #652e14,
+  0 0 35px #b76526,
+  0 0 40px #31200f;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+option {
+  background-color: black;
+  color: white;
+}
+
+
+input[type="text"], 
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #fff;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+input:hover,
+select:hover {
+  color: white;
+  border-bottom-color: white;
+}
+
+input::placeholder,
+select::placeholder {
+  color: #ccc;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+input:hover::placeholder,
+select:hover::placeholder {
+  color: white;
+  text-shadow: 0 0 5px white;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #f0ad4e;
+}
+
+
+
+a{
+  color: #f0ad4e;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover{
+  color: white;
+  text-shadow: 0 0 5px white;
+
+}
+
+@media only screen and (max-width: 780px) {
+  .image-section{
+    flex:0;
+  }
+}

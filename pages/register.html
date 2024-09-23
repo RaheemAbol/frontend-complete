@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/register.css" />
+    <style>
+        .error-message {
+            color: #f0ad4e;
+            font-size: 12px;
+            margin-top: -15px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section"></div>
+        <div class="form-section">
+            <h1>Sign Up For An Account</h1>
+            <form id="signupForm" action="login.html">
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Full Name"
+                    />
+                    <div class="error-message" id="nameError">Please enter your full name.</div>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email Address"
+                    />
+                    <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                    <input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        placeholder="Phone number"
+                    />
+                    <div class="error-message" id="telError">Please enter a valid phone number.</div>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        
+                    />
+                    <div class="error-message" id="passwordError">Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.</div>
+                    <select id="refer" name="refer" >
+                        <option value="" disabled selected>
+                            How did you hear about us?
+                        </option>
+                        <option value="facebook">Facebook</option>
+                        <option value="linkedin">Linkedin</option>
+                        <option value="google">Google</option>
+                    </select>
+                    <div class="error-message" id="referError">Please select how you heard about us.</div>
+                <fieldset class="dining-space">
+                    <legend>Preferred Contact Method</legend>
+                    <label>
+                        <input type="radio" name="contact" value="email" />
+                        Email
+                    </label>
+                    <label>
+                        <input type="radio" name="contact" value="phone" />
+                        Phone
+                    </label>
+                </fieldset>
+
+                <label>
+                    <input type="checkbox" id="terms" name="terms" />
+                    I agree to the terms and conditions
+                </label>
+                <div class="error-message" id="termsError" style="margin-top:15px">You must agree to the terms and conditions.</div>
+
+                <button type="submit" class="book-btn">Register</button>
+            </form>
+            <p>Already a member?... <a href="login.html">Sign in</a></p>
+        </div>
+    </div>
+
+   <script src="../js/validation.js"></script>
+</body>
+</html>

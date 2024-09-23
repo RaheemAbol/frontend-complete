@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: url("../images/offroad2.jpg") no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        font-family: "Fascinate Inline", system-ui;
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          #f39521,
+          #ff6b08,
+          #cc2e0a,
+          #ee5b44
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+
+      form {
+        height: 350px;
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 1rem;
+        background-color: rgb(255, 243, 224);
+      }
+      input {
+        height: 30px;
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 40px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 1rem;
+      }
+
+      button {
+        height: 40px;
+        width: 200px;
+        border-radius: 10px;
+        margin-top: 45px;
+        margin-left: 45px;
+        font-size: 16px;
+        font-family: "Fascinate Inline", system-ui;
+        background: linear-gradient(
+          to right,
+          #f39521,
+          #ff6b08,
+          #cc2e0a,
+          #ee5b44
+        );
+      }
+      button:hover {
+        color: white;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Auto Arcade!</h1>
+      <form action="home.html">
+        <h1>Login</h1>
+        <label for="email"></label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Enter a valid email"
+        />
+
+        <label for="password"></label>
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+          pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}"
+          title="Password must be 8-20 characters long, include at least one letter and one number"
+        />
+        <br />
+        <button>Enter</button>
+      </form>
+    </div>
+  </body>
+</html>
